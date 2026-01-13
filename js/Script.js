@@ -4,11 +4,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //  Header Animation (Slide from Top)
     gsap.from("header", {
-        duration: 1,
-        y: -50,
+        duration: 0.8,
+        y: -100,
         opacity: 0,
         ease: "power2.out"
     });
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = menuBtn ? menuBtn.querySelector("i") : null;
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            if (menuIcon) {
+                menuIcon.classList.toggle("fa-bars");
+                menuIcon.classList.toggle("fa-xmark");
+            }
+            
+            // Animate items in mobile menu
+            if (!mobileMenu.classList.contains("hidden")) {
+                gsap.from("#mobile-menu li", {
+                    x: -20,
+                    opacity: 0,
+                    stagger: 0.1,
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
+            }
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = mobileMenu.querySelectorAll("li");
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                if (menuIcon) {
+                    menuIcon.classList.add("fa-bars");
+                    menuIcon.classList.remove("fa-xmark");
+                }
+            });
+        });
+    }
 
     //  Hero Section Animation (Text from Left, Image Scale Up)
     gsap.from(".Hero .left", {
@@ -29,19 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //  Client Logos (Staggered Fade-In)
     gsap.from(".client img", {
-        duration: 1,
+        duration: 0.8,
         opacity: 0,
-        y: 30,
-        stagger: 0.2,
+        y: 20,
+        stagger: 0.1,
         ease: "power2.out",
         scrollTrigger: {
-            trigger: '.client img',
-            start: "top 80%",
-            end: "top 50%",
-            scrub: 1,
-            // markers: true,
+            trigger: '.client',
+            start: "top 85%",
+            toggleActions: "play none none reverse"
         }
-        
     });
 
     //  Boxes Animation (Scale & Fade-In)
@@ -66,15 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.utils.toArray(".scroll-reveal").forEach((section) => {
         gsap.from(section, {
             opacity: 0,
-            y: 50,
-            duration: 1,
+            y: 30,
+            duration: 0.8,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: section,
-                start: "top 80%",
-                end: "top 50%",
-                scrub: 1,
-                // markers: true,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
             }
         });
     });

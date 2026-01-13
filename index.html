@@ -12,22 +12,45 @@
     <title>Nexcent</title>
 </head>
 
-<body >
+<body>
 
     <!-- header part -->
     <header>
-        <div class="w-[90%] m-auto bg-white px-[100px]  py-4 flex justify-between items-center">
+        <div class="w-[90%] m-auto bg-white px-6 md:px-[100px]  py-4 flex justify-between items-center">
             <img src="./assets/Logo.svg" alt="" class="w-[107px]">
-            <div class="contant flex items-center justify-end gap-7">
-                <ul class="flex gap-[16px] text-[15px] cursor-pointer">
-                    <li>Home</li>
-                    <li>Features</li>
-                    <li>Community</li>
-                    <li>Blog</li>
-                    <li>Pricing</li>
-                </ul>
-                <button class="navbtn cursor-pointer px-[22px] py-[10px] bg-[#4CAF4F] text-white flex items-center hover:bg-[#53a560] rounded-[3px] text-[15px] gap-1.5"><span>Register Now</span><i class="fa-solid fa-arrow-right-long"></i></button>
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex items-center gap-7">
+                    <ul class="flex gap-[16px] text-[15px] cursor-pointer">
+                        <li>Home</li>
+                        <li>Features</li>
+                        <li>Community</li>
+                        <li>Blog</li>
+                        <li>Pricing</li>
+                    </ul>
+                    <button
+                        class="navbtn cursor-pointer px-[22px] py-[10px] bg-[#4CAF4F] text-white flex items-center hover:bg-[#53a560] rounded-[3px] text-[15px] gap-1.5"><span>Register
+                            Now</span><i class="fa-solid fa-arrow-right-long"></i></button>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-2xl text-[#4D4D4D] focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 absolute w-full left-0 z-50 shadow-md">
+            <ul class="flex flex-col gap-4 text-[15px] text-[#4D4D4D] mb-4">
+                <li>Home</li>
+                <li>Features</li>
+                <li>Community</li>
+                <li>Blog</li>
+                <li>Pricing</li>
+            </ul>
+            <button
+                class="w-full justify-center navbtn cursor-pointer px-[22px] py-[10px] bg-[#4CAF4F] text-white flex items-center hover:bg-[#53a560] rounded-[3px] text-[15px] gap-1.5">
+                <span>Register Now</span><i class="fa-solid fa-arrow-right-long"></i>
+            </button>
         </div>
     </header>
 
@@ -36,19 +59,23 @@
         <!--  Hero section -->
         <div class="Hero  mb-[33px] bg-[#F5F7FA] shadow-[0_5px_10px_rgba(0,0,0,0.10)] relative">
             <img src="./assets/Dot.svg" alt="" class="absolute bottom-[4%] left-[50%]">
-            <div class="w-[90%] m-auto  flex justify-between items-center px-[100px] py-[70px]">
-                <div class="left ">
-                    <h1 class=" mb-[12px] font-semibold  text-[#4e4e4e] text-6xl leading-[52px]">Lesson and insights <span class=" text-[#4CAF4F]"><br> from 8 years</span></h1>
-                    <p class="mb-5 text-[#717171] text-[15px] ">Where to grow your business as a photographer: site or social media?</p>
-                    <button class="herobtn cursor-pointer px-[22px] py-[10px] text-[15px] rounded-[3px] bg-[#4CAF4F] text-white text-center hover:bg-[#237D31] ">Register</button>
+            <div
+                class="w-[90%] m-auto flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-[100px] py-[70px]">
+                <div class="left text-center md:text-left">
+                    <h1 class=" mb-[12px] font-semibold  text-[#4e4e4e] text-4xl md:text-6xl leading-[52px]">Lesson and
+                        insights <span class=" text-[#4CAF4F]"><br> from 8 years</span></h1>
+                    <p class="mb-5 text-[#717171] text-[15px] ">Where to grow your business as a photographer: site or
+                        social media?</p>
+                    <button
+                        class="herobtn cursor-pointer px-[22px] py-[10px] text-[15px] rounded-[3px] bg-[#4CAF4F] text-white text-center hover:bg-[#237D31] ">Register</button>
                 </div>
                 <img src="./assets/Illustration.png" alt="" class=" w-[272px] h-[283px]">
-                
+
             </div>
         </div>
-        <div class="client min-h-fit w-full my-[30px] px-[100px] scroll-reveal">
+        <div class="client min-h-fit w-full my-[30px] px-6 md:px-[100px] scroll-reveal">
             <div class="text-center">
-                <h1 class="text-[30px] font-bold text-[#4e4e4e]" >Our Clients</h1>
+                <h1 class="text-[30px] font-bold text-[#4e4e4e]">Our Clients</h1>
                 <p class="text-[15px] mb-4 text-[#717171] ">We have been working with some Fortune 500+ clints</p>
                 <div class="logo flex justify-around items-center w-[85%] m-auto my-12">
                     <img src="./assets/Logo (1).png" alt="" class="logo1 ">
@@ -61,74 +88,93 @@
                 </div>
             </div>
         </div>
-        <div class="w-[90%] px-[100px] m-auto community  min-h-fit text-center my-[33px] scroll-reveal">
+        <div <div class="w-[90%] px-6 md:px-[100px] m-auto community  min-h-fit text-center my-[33px] scroll-reveal">
             <div>
                 <div class="mb-[25px]">
-                    <h1 class="text-[30px] font-bold mb-2 leading-9 text-[#4e4e4e]" >Manage your entire community <br> in single system</h1>
-                <p class="text-[15px] text-[#717171] ">Who is nextcent suitable for?</p>
+                    <h1 class="text-[30px] font-bold mb-2 leading-9 text-[#4e4e4e]">Manage your entire community <br> in
+                        single system</h1>
+                    <p class="text-[15px] text-[#717171] ">Who is nextcent suitable for?</p>
                 </div>
-                <div class="boxes flex flex-wrap  items-center justify-between scroll-reveal">
-                    <div class="first  w-[250px] p-[22px] items-center flex flex-col justify-between shadow-[0_2px_10px_rgba(0,0,0,0.25)]  rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <div class="boxes flex flex-wrap  items-center justify-between gap-10 scroll-reveal">
+                    <div
+                        class="first  w-[250px] p-[22px] items-center flex flex-col justify-between shadow-[0_2px_10px_rgba(0,0,0,0.25)]  rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                         <div class="ico relative mb-[12px]">
-                            <img src="./assets/Vector.svg" alt="" class="absolute w-[35px] h-[35px] left-[-10px] top-[-2px] z-10">
+                            <img src="./assets/Vector.svg" alt=""
+                                class="absolute w-[35px] h-[35px] left-[-10px] top-[-2px] z-10">
                             <div class="bg-[#E8F5E9] w-[35px] h-[35px]  rounded-br-[13px] rounded-tl-[7px]"></div>
                         </div>
                         <div class="contant">
-                            <h1 class="text-[25px] font-bold mb-4 text-[#4e4e4e] leading-7">Membership Organisations</h1>
-                            <p class="text-[11px] text-[#717171] " >Our membership management sofwhare provide full automation of membership renewal and payments</p>
+                            <h1 class="text-[25px] font-bold mb-4 text-[#4e4e4e] leading-7">Membership Organisations
+                            </h1>
+                            <p class="text-[11px] text-[#717171] ">Our membership management sofwhare provide full
+                                automation of membership renewal and payments</p>
                         </div>
                     </div>
-    
-                    <div class="first  w-[250px] p-[22px] items-center flex flex-col justify-between shadow-[0_2px_10px_rgba(0,0,0,0.25)]  rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+
+                    <div
+                        class="first  w-[250px] p-[22px] items-center flex flex-col justify-between shadow-[0_2px_10px_rgba(0,0,0,0.25)]  rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                         <div class="ico relative mb-[12px]">
-                            <img src="./assets/city.svg" alt="" class="absolute w-[35px] h-[35px] left-[-10px] top-[-2px] z-10">
+                            <img src="./assets/city.svg" alt=""
+                                class="absolute w-[35px] h-[35px] left-[-10px] top-[-2px] z-10">
                             <div class="bg-[#E8F5E9] w-[35px] h-[35px]  rounded-br-[13px] rounded-tl-[7px]"></div>
                         </div>
                         <div class="contant">
                             <h1 class="text-[25px] font-bold mb-4 text-[#4e4e4e] leading-7">National Associations</h1>
-                            <p class="text-[11px] text-[#717171] " >Our membership management sofwhare provide full automation of membership renewal and payments</p>
+                            <p class="text-[11px] text-[#717171] ">Our membership management sofwhare provide full
+                                automation of membership renewal and payments</p>
                         </div>
                     </div>
-    
-                    <div class="first  w-[250px] p-[22px] items-center flex flex-col justify-between shadow-[0_2px_10px_rgba(0,0,0,0.25)]  rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+
+                    <div
+                        class="first  w-[250px] p-[22px] items-center flex flex-col justify-between shadow-[0_2px_10px_rgba(0,0,0,0.25)]  rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                         <div class="ico relative mb-[12px]">
-                            <img src="./assets/Group 2.svg" alt="" class="absolute w-[35px] h-[35px] left-[-10px] top-[-2px] z-10">
+                            <img src="./assets/Group 2.svg" alt=""
+                                class="absolute w-[35px] h-[35px] left-[-10px] top-[-2px] z-10">
                             <div class="bg-[#E8F5E9] w-[35px] h-[35px]  rounded-br-[13px] rounded-tl-[7px]"></div>
                         </div>
                         <div class="contant">
                             <h1 class="text-[25px] font-bold mb-4 text-[#4e4e4e] leading-7">Clubs And Groups</h1>
-                            <p class="text-[11px] text-[#717171] " >Our membership management sofwhare provide full automation of membership renewal and payments</p>
+                            <p class="text-[11px] text-[#717171] ">Our membership management sofwhare provide full
+                                automation of membership renewal and payments</p>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
 
         <div class="w-[90%] m-auto mb-[33px] scroll-reveal">
-            <div class=" flex  items-center justify-between px-[100px] gap-5">
+            <div class=" flex flex-col md:flex-row items-center justify-between px-6 md:px-[100px] gap-5">
                 <img src="./assets/Frame 35.svg" alt="" class=" w-[355px] h-[350px]">
-                
-                <div class="left w-[60%]">
+
+                <div class="left w-full md:w-[60%] text-center md:text-left">
                     <div class="mb-[25px]">
-                        <h1 class="text-4xl font-bold  text-[#4e4e4e] leading-8 mb-[15px]">The unseen of spending three <br> years at Pixelgrade</h1>
-                        <p class="text-[13px] leading-3 mb-5 text-[#717171] w-[90%]">Our membership management sofwhare provide full automation of membership renewal and payments Where to grow your business as a photographer: site or social media Our membership management sofwhare provide full automation of membership renewal and payments Our membership management sofwhare provide full automation of membership renewal and payments</p>
+                        <h1 class="text-4xl font-bold  text-[#4e4e4e] leading-8 mb-[15px]">The unseen of spending three
+                            <br> years at Pixelgrade
+                        </h1>
+                        <p class="text-[13px] leading-3 mb-5 text-[#717171] w-[90%] m-auto md:m-0">Our membership
+                            management sofwhare provide full automation of membership renewal and payments Where to grow
+                            your business as a photographer: site or social media Our membership management sofwhare
+                            provide full automation of membership renewal and payments Our membership management
+                            sofwhare provide full automation of membership renewal and payments</p>
                     </div>
-                    <button class="herobtn cursor-pointer px-[22px] py-[10px] text-[15px] rounded-[3px] bg-[#4CAF4F] text-white text-center hover:bg-[#237D31] ">Register</button>
+                    <button
+                        class="herobtn cursor-pointer px-[22px] py-[10px] text-[15px] rounded-[3px] bg-[#4CAF4F] text-white text-center hover:bg-[#237D31] ">Register</button>
                 </div>
-            
+
             </div>
         </div>
 
         <div class=" bg-[#F5F7FA] mb-[33px] stats scroll-reveal">
-            <div class="w-[90%] m-auto px-[100px] flex justify-between items-center   py-[45px]  ">
-                <div>
+            <div
+                class="w-[90%] m-auto px-6 md:px-[100px] flex flex-col md:flex-row justify-between items-center   py-[45px]  ">
+                <div class="text-center md:text-left mb-10 md:mb-0">
                     <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-8">Helping a local <br>
                         <span class="text-green-600">business reinvent itself</span>
                     </h2>
                     <p class="text-[13px] text-gray-500 mt-2">We reached here with our hard work and dedication</p>
                 </div>
-                <div class=" w-[40%] flex flex-col items-center justify-around gap-7">
+                <div class=" w-full md:w-[40%] flex flex-col items-center justify-around gap-7">
                     <div class=" flex items-center justify-around gap-7 w-[100%]">
                         <div class="flex items-center space-x-3">
                             <div class="text-green-600 text-2xl">
@@ -164,7 +210,8 @@
                                 <i class="fa-solid fa-credit-card"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900 counter" data-target="1926436">1,926,436</h3>
+                                <h3 class="text-lg font-semibold text-gray-900 counter" data-target="1926436">1,926,436
+                                </h3>
                                 <p class="text-gray-500 text-sm">Payments</p>
                             </div>
                         </div>
@@ -172,96 +219,129 @@
                 </div>
             </div>
         </div>
-        
-  
+
+
 
 
         <div class="w-[90%] m-auto mb-[33px] scroll-reveal">
-            <div class=" flex  items-center justify-between px-[100px] gap-5">
+            <div class=" flex flex-col md:flex-row items-center justify-between px-6 md:px-[100px] gap-5">
                 <img src="./assets/mobile.svg" alt="" class=" w-[355px] h-[350px]">
-                
-                <div class="left w-[60%]">
+
+                <div class="left w-full md:w-[60%] text-center md:text-left">
                     <div class="mb-[25px]">
-                        <h1 class="text-4xl font-bold  text-[#4e4e4e] leading-8 mb-[15px]">How to design your sight footer  <br>like we did</h1>
-                        <p class="text-[13px] leading-3 mb-5 text-[#717171] w-[90%]">Our membership management sofwhare provide full automation of membership renewal and payments Where to grow your business as a photographer: site or social media Our membership management sofwhare provide full automation of membership renewal and payments Our membership management sofwhare provide full automation of membership renewal and payments</p>
+                        <h1 class="text-4xl font-bold  text-[#4e4e4e] leading-8 mb-[15px]">How to design your sight
+                            footer <br>like we did</h1>
+                        <p class="text-[13px] leading-3 mb-5 text-[#717171] w-[90%] m-auto md:m-0">Our membership
+                            management sofwhare provide full automation of membership renewal and payments Where to grow
+                            your business as a photographer: site or social media Our membership management sofwhare
+                            provide full automation of membership renewal and payments Our membership management
+                            sofwhare provide full automation of membership renewal and payments</p>
                     </div>
-                    <button class="herobtn cursor-pointer px-[22px] py-[10px] text-[15px] rounded-[3px] bg-[#4CAF4F] text-white text-center hover:bg-[#237D31] ">Register</button>
+                    <button
+                        class="herobtn cursor-pointer px-[22px] py-[10px] text-[15px] rounded-[3px] bg-[#4CAF4F] text-white text-center hover:bg-[#237D31] ">Register</button>
                 </div>
-            
+
             </div>
         </div>
 
-        <div class="w-[90%] m-auto bg-[#F5F7FA] mb-[33px] scroll-reveal">
-            <div class=" p-[100px] flex  items-center justify-between ">
-                
-                <div>
+        <div class="w-[90%] m-auto bg-[#F5F7FA] mb-[33px] scroll-reveal px-6 md:px-[100px] py-10 md:py-0">
+            <div class="flex flex-col md:flex-row items-center justify-between ">
+
+                <div class="mb-8 md:mb-0">
                     <img src="./assets/image 9.png" alt="" class="w-[300px]  rounded-2xl m-auto ">
                 </div>
-            
-                <div class="left w-[60%]">
-                    <p class="text-[13px] mb-3 text-[#717171] leading-4 w-[570px]">Our membership management sofwhare provide full automation of membership renewal and payments Where to grow your business as a photographer: site or social media Our membership management sofwhare provide full automation of membership renewal and payments Our membership management sofwhare provide full automation of membership renewal and payments Our membership management sofwhare provide full automation of membership renewal and payments</p>
+
+                <div class="left w-full md:w-[60%] text-center md:text-left">
+                    <p class="text-[13px] mb-3 text-[#717171] leading-4 w-full md:w-[570px]">Our membership management
+                        sofwhare provide full automation of membership renewal and payments Where to grow your business
+                        as a photographer: site or social media Our membership management sofwhare provide full
+                        automation of membership renewal and payments Our membership management sofwhare provide full
+                        automation of membership renewal and payments Our membership management sofwhare provide full
+                        automation of membership renewal and payments</p>
                     <h1 class="text-[18px] font-bold  text-[#4fa151] text-wrap">Tim smith</h1>
-                    <h1 class="text-[15px] font-bold  text-[#868484] text-wrap">British Dragon Boat Racing Assocition</h1>
-                    <div class="logo flex justify-around items-center w-[85%] my-12">
-                        <img src="./assets/Logo (1).png" alt="" class="logo1  shadow-[0_2px_10px_rgba(0,0,0,0.25)] rounded-[5px]">
+                    <h1 class="text-[15px] font-bold  text-[#868484] text-wrap">British Dragon Boat Racing Assocition
+                    </h1>
+                    <div
+                        class="logo flex flex-wrap justify-center md:justify-around items-center w-full md:w-[85%] my-12 gap-6 md:gap-0">
+                        <img src="./assets/Logo (1).png" alt=""
+                            class="logo1  shadow-[0_2px_10px_rgba(0,0,0,0.25)] rounded-[5px]">
                         <img src="./assets/Logo (2).png" alt="" class="logo2 ">
                         <img src="./assets/Logo (3).png" alt="" class="logo3 ">
                         <img src="./assets/Logo (4).png" alt="" class="logo4 ">
                         <img src="./assets/Logo (5).png" alt="" class="logo5 ">
                         <img src="./assets/Logo (6).png" alt="" class="logo6 ">
-                        <button class="cursor-pointer text-[18px] text-[#43A046]  text-center font-medium hover:text-[#237D31] flex items-center gap-1.5"><span>meet all customers</span><i class="fa-solid fa-arrow-right-long text-[18px]"></i></button>
-                        
+                        <button
+                            class="cursor-pointer text-[18px] text-[#43A046]  text-center font-medium hover:text-[#237D31] flex items-center gap-1.5"><span>meet
+                                all customers</span><i class="fa-solid fa-arrow-right-long text-[18px]"></i></button>
+
                     </div>
                 </div>
-            
+
             </div>
         </div>
-
-        <div class="community  w-[90%] m-auto px-[100px]  text-center  flex-col mb-[33px] scroll-reveal">
+        <div class="community  w-[90%] m-auto px-6 md:px-[100px]  text-center  flex-col mb-[33px] scroll-reveal">
             <div>
-                <h1 class="text-4xl font-bold mb-4 text-[#4e4e4e]" >Caring the ner marketing </h1>
-                <p class="mb-4 text-[#717171] text-[13px] w-[50%] m-auto leading-4">Who is nextcent suitable for? Our membership management sofwhare provide full automation of membership renewal and payments Our membership management sofwhare provide full automation of membership renewal and payments</p>
+                <h1 class="text-4xl font-bold mb-4 text-[#4e4e4e]">Caring the ner marketing </h1>
+                <p class="mb-4 text-[#717171] text-[13px] w-full md:w-[50%] m-auto leading-4">Who is nextcent suitable
+                    for? Our membership management sofwhare provide full automation of membership renewal and payments
+                    Our membership management sofwhare provide full automation of membership renewal and payments</p>
             </div>
-            <div class="boxes   flex flex-wrap  items-center justify-between mt-12  ">
-                
-                <div class="first  w-[250px] h-[256px] items-center flex flex-col relative gap-[-66px] rounded-2xl">
-                    
+            <div class="boxes   flex flex-wrap  items-center justify-between mt-12 gap-16 md:gap-0 ">
+
+                <div class="first  w-[250px] h-[256px] items-center flex flex-col relative m-auto md:m-0 rounded-2xl">
+
                     <img src="./assets/image 18.png" alt="" class="logo6 w-[100%] h-[200px]  rounded-2xl">
-                    
-                    <div class="contant w-[220px] h-[123px] absolute bottom-[0%] translate-[-50% -50%] m-auto bg-white p-[11px] items-center flex flex-col justify-between shadow-gray-600 shadow rounded-[7px]">
-                        <p class="mb-3 text-[#717171] text-[15px] leading-5 font-semibold" >Creating Streamlined Safeguarding Processes with OneRen</p>
-                        <button class="cursor-pointer text-[#43A046]  text-center font-semibold hover:text-[#237D31] text-[15px] flex items-center gap-1.5"><span>Readmore</span><i class="fa-solid fa-arrow-right-long"></i></button>
+
+                    <div
+                        class="contant w-[220px] h-[123px] absolute bottom-[0%] translate-[-50% -50%] m-auto bg-white p-[11px] items-center flex flex-col justify-between shadow-gray-600 shadow rounded-[7px]">
+                        <p class="mb-3 text-[#717171] text-[15px] leading-5 font-semibold">Creating Streamlined
+                            Safeguarding Processes with OneRen</p>
+                        <button
+                            class="cursor-pointer text-[#43A046]  text-center font-semibold hover:text-[#237D31] text-[15px] flex items-center gap-1.5"><span>Readmore</span><i
+                                class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
 
-                <div class="first  w-[250px] h-[256px] items-center flex flex-col relative gap-[-66px] rounded-2xl">
-                    
+                <div class="first  w-[250px] h-[256px] items-center flex flex-col relative m-auto md:m-0 rounded-2xl">
+
                     <img src="./assets/image 18.png" alt="" class="logo6 w-[100%] h-[200px]  rounded-2xl">
-                    
-                    <div class="contant w-[220px] h-[123px] absolute bottom-[0%] translate-[-50% -50%] m-auto bg-white p-[11px] items-center flex flex-col justify-between shadow-gray-600 shadow rounded-[7px]">
-                        <p class="mb-3 text-[#717171] text-[15px] leading-5 font-semibold" >Creating Streamlined Safeguarding Processes with OneRen</p>
-                        <button class="cursor-pointer text-[#43A046]  text-center font-semibold hover:text-[#237D31] text-[15px] flex items-center gap-1.5"><span>Readmore</span><i class="fa-solid fa-arrow-right-long"></i></button>
+
+                    <div
+                        class="contant w-[220px] h-[123px] absolute bottom-[0%] translate-[-50% -50%] m-auto bg-white p-[11px] items-center flex flex-col justify-between shadow-gray-600 shadow rounded-[7px]">
+                        <p class="mb-3 text-[#717171] text-[15px] leading-5 font-semibold">Creating Streamlined
+                            Safeguarding Processes with OneRen</p>
+                        <button
+                            class="cursor-pointer text-[#43A046]  text-center font-semibold hover:text-[#237D31] text-[15px] flex items-center gap-1.5"><span>Readmore</span><i
+                                class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
 
-                <div class="first  w-[250px] h-[256px] items-center flex flex-col relative gap-[-66px] rounded-2xl">
-                    
+                <div class="first  w-[250px] h-[256px] items-center flex flex-col relative m-auto md:m-0 rounded-2xl">
+
                     <img src="./assets/image 18.png" alt="" class="logo6 w-[100%] h-[200px]  rounded-2xl">
-                    
-                    <div class="contant w-[220px] h-[123px] absolute bottom-[0%] translate-[-50% -50%] m-auto bg-white p-[11px] items-center flex flex-col justify-between shadow-gray-600 shadow rounded-[7px]">
-                        <p class="mb-3 text-[#717171] text-[15px] leading-5 font-semibold" >Creating Streamlined Safeguarding Processes with OneRen</p>
-                        <button class=" cursor-pointer text-[#43A046]  text-center font-semibold hover:text-[#237D31] text-[15px] flex items-center gap-1.5"><span>Readmore</span><i class="fa-solid fa-arrow-right-long"></i></button>
+
+                    <div
+                        class="contant w-[220px] h-[123px] absolute bottom-[0%] translate-[-50% -50%] m-auto bg-white p-[11px] items-center flex flex-col justify-between shadow-gray-600 shadow rounded-[7px]">
+                        <p class="mb-3 text-[#717171] text-[15px] leading-5 font-semibold">Creating Streamlined
+                            Safeguarding Processes with OneRen</p>
+                        <button
+                            class=" cursor-pointer text-[#43A046]  text-center font-semibold hover:text-[#237D31] text-[15px] flex items-center gap-1.5"><span>Readmore</span><i
+                                class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
         <div class="contant bg-[#F5F7FA] text-center py-[25px] ">
-            <h1 class="text-5xl leading-14 font-semibold mb-5 text-[#3a3939] w-[50%] text-wrap m-auto">Pellentesque suscripit fringilla libero eu.</h1>
+            <h1
+                class="text-3xl md:text-5xl leading-tight font-semibold mb-5 text-[#3a3939] w-[90%] md:w-[50%] text-wrap m-auto">
+                Pellentesque suscripit fringilla libero eu.</h1>
 
-            <button class="navbtn cursor-pointer m-auto px-[22px] py-[10px] bg-[#4CAF4F] text-center font-medium text-white flex items-center hover:bg-[#237D31] rounded-[3px] text-[15px] gap-1.5"><span>Get a Demo</span><i class="fa-solid fa-arrow-right-long"></i></button>
-            
+            <button
+                class="navbtn cursor-pointer m-auto px-[22px] py-[10px] bg-[#4CAF4F] text-center font-medium text-white flex items-center hover:bg-[#237D31] rounded-[3px] text-[15px] gap-1.5"><span>Get
+                    a Demo</span><i class="fa-solid fa-arrow-right-long"></i></button>
+
         </div>
     </section>
     <footer>
@@ -288,7 +368,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Company Links -->
                 <div>
                     <h3 class="text-lg font-semibold">Company</h3>
@@ -300,7 +380,7 @@
                         <li><a href="#" class="hover:text-white">Testimonial</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Support Links -->
                 <div>
                     <h3 class="text-lg font-semibold">Support</h3>
@@ -312,12 +392,13 @@
                         <li><a href="#" class="hover:text-white">Status</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Newsletter -->
                 <div>
                     <h3 class="text-lg font-semibold">Stay up to date</h3>
                     <div class="mt-2 flex items-center bg-gray-800 rounded-lg overflow-hidden">
-                        <input type="email" placeholder="Your email address" class="bg-transparent text-gray-300 px-4 py-2 outline-none w-full">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-transparent text-gray-300 px-4 py-2 outline-none w-full">
                         <button class="bg-gray-800 px-4 py-2 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i>
                         </button>
@@ -325,7 +406,8 @@
                 </div>
             </div>
         </footer>
-        <div class="p-2.5 text-white bg-[#40555f] text-center font-semibold text-[13px]">© 2025 Hassan Abdullah . All rights reserved.</div>
+        <div class="p-2.5 text-white bg-[#40555f] text-center font-semibold text-[13px]">© 2025 Hassan Abdullah . All
+            rights reserved.</div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
